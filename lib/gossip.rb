@@ -10,13 +10,13 @@ class Gossip
   end
 
   def save
-    CSV.open('../db/gossip.csv', 'a') do |csv|
-      csv << [author ,content]
+    CSV.open('./db/gossip.csv', 'a') do |csv|
+      csv << [@author ,@content]
     end
   end
 end
 
-#binding.pry 
+#binding.pry
 
 #my_gossip = Gossip.new("auteur", "ceci est un exemple content") #=> Crée une instance de potin, sauvergardée juste dans cette variable
 #my_gossip.save #=> Sauvegarde l'instance de potin dans le CSV correspondant, en créant une nouvelle ligne dans mon fichier CSV
